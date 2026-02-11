@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statspack Meeting Portal</title>
+
+<style>
+body{
+margin:0;
+font-family: "Segoe UI", Arial, sans-serif;
+background: linear-gradient(135deg,#0a1a2f,#132a4a);
+color:white;
+}
+
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.2);
+backdrop-filter: blur(8px);
+}
+
+.logo{
+height:165px;   /* LOGO 3X BIGGER */
+}
+
+/* SOCIAL ICONS */
+.social-icons a{
+margin-left:15px;
+display:inline-block;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+transform:scale(1.15);
+}
+
+.social-icons img{
+width:28px;
+}
+
+/* MAKE WEB ICON WHITE */
+.web-icon{
+filter: brightness(0) invert(1);
+}
+
+/* MEETING AREA */
+.meeting-container{
+padding:20px;
+}
+
+iframe{
+width:100%;
+height:75vh;
+border:none;
+border-radius:14px;
+box-shadow:0px 0px 25px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.3);
+font-size:14px;
+margin-top:15px;
+}
+
+.footer a{
+color:#4da6ff;
+text-decoration:none;
+}
+
+.footer a:hover{
+text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+<img src="logo.png" class="logo">
+
+<div class="social-icons">
+
+<a href="https://statspack.my.canva.site" target="_blank">
+<img class="web-icon" src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+</a>
+
+<a href="https://x.com/Statspack33" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png">
+</a>
+
+<a href="https://www.linkedin.com/company/statspack/posts/?feedView=all" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png">
+</a>
+
+<a href="https://www.youtube.com/@statspack" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
+</div>
+</div>
+
+<!-- MEETING -->
+<div class="meeting-container">
+<iframe 
+src="https://meet.jit.si/ASID2026LesothoNationalCoordinationMeeting"
+allow="camera; microphone; fullscreen; display-capture">
+</iframe>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Statspack International. All Rights Reserved.<br>
+Inquiries: <a href="mailto:inquiries@statspackbw.com">inquiries@statspackbw.com</a>
+</div>
+
+</body>
+</html>
