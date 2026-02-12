@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Statspack Meeting Portal</title>
 
+<script src='https://8x8.vc/vpaas-magic-cookie-2bf4fd115a2c4bb2abdae6ac8c4207a7/external_api.js' async></script>
+
 <style>
 body{
 margin:0;
@@ -24,7 +26,7 @@ backdrop-filter: blur(8px);
 }
 
 .logo{
-height:165px;   /* LOGO 3X BIGGER */
+height:165px;
 }
 
 /* SOCIAL ICONS */
@@ -50,13 +52,14 @@ filter: brightness(0) invert(1);
 /* MEETING AREA */
 .meeting-container{
 padding:20px;
+height:75vh;
 }
 
-iframe{
+#jaas-container{
 width:100%;
-height:75vh;
-border:none;
+height:100%;
 border-radius:14px;
+overflow:hidden;
 box-shadow:0px 0px 25px rgba(0,0,0,0.5);
 }
 
@@ -77,8 +80,17 @@ text-decoration:none;
 .footer a:hover{
 text-decoration:underline;
 }
-
 </style>
+
+<script>
+window.onload = () => {
+  const api = new JitsiMeetExternalAPI("8x8.vc", {
+    roomName: "vpaas-magic-cookie-2bf4fd115a2c4bb2abdae6ac8c4207a7/SampleAppConvincedSecondsAskPromptly",
+    parentNode: document.querySelector('#jaas-container')
+  });
+}
+</script>
+
 </head>
 
 <body>
@@ -106,15 +118,17 @@ text-decoration:underline;
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </a>
 
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/26668088101" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
 </div>
 </div>
 
 <!-- MEETING -->
 <div class="meeting-container">
-<iframe 
-src="https://meet.jit.si/ASID2026LesothoNationalCoordinationMeeting"
-allow="camera; microphone; fullscreen; display-capture">
-</iframe>
+<div id="jaas-container"></div>
 </div>
 
 <!-- FOOTER -->
