@@ -26,28 +26,6 @@ position:relative;
 
 .logo{ height:165px; }
 
-/* ADMIN BUTTON */
-.join-btn{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-background:#2ea3ff;
-color:white;
-border:none;
-padding:14px 28px;
-font-size:18px;
-font-weight:600;
-border-radius:40px;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 0 15px rgba(46,163,255,0.6);
-}
-
-.join-btn:hover{
-background:#1c8be0;
-transform:translateX(-50%) scale(1.05);
-}
-
 /* SOCIAL ICONS */
 .social-icons a{
 margin-left:15px;
@@ -106,11 +84,6 @@ text-decoration:none;
 
 <img src="logo.png" class="logo">
 
-<!-- ADMIN PANEL BUTTON -->
-<button class="join-btn" onclick="openAdminPanel()">
-ADMIN PANEL
-</button>
-
 <div class="social-icons">
 <a href="https://statspack.my.canva.site" target="_blank">
 <img class="web-icon" src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
@@ -138,11 +111,11 @@ ADMIN PANEL
 </div>
 </div>
 
-<!-- EMBEDDED MAIN MEETING -->
+<!-- EMBEDDED MEETING -->
 <div class="meeting-container">
 <div class="video-wrapper">
 <iframe
-src="https://meet.jit.si/moderated/0b642f21c6c1228299fddb4349cc6a519dc70f5b278cda6f9eca4dbc6125d157"
+src="https://meet.jit.si/moderated/0b642f21c6c1228299fddb4349cc6a519dc70f5b278cda6f9eca4dbc6125d157#jwt=%22eyJraWQiOiJqaXRzaS9tb2RlcmF0ZWQtMjAyNS0xMC0yOS1iMzRhYmI4NyIsImFsZyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJpc3MiOiJqaXRzaSIsInN1YiI6Im1vZGVyYXRlZCIsImF1ZCI6ImppdHNpIiwiaWF0IjoxNzcyMTkzNDMwLCJleHAiOjE3NzIyMDc4MzAsInJvb20iOiIwYjY0MmYyMWM2YzEyMjgyOTlmZGRiNDM0OWNjNmE1MTlkYzcwZjViMjc4Y2RhNmY5ZWNhNGRiYzYxMjVkMTU3IiwidXNlcl9pZCI6IkxnQk8zSW1XeUxZYTJSbDdyMUFLbm91Rm1CQzIiLCJuYW1lIjoiU3RhdHMgUGFjayIsImVtYWlsIjoic3RhdHNwYWNrYndAZ21haWwuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lqa01tTGVuUmhnRDBkWGlqNFVMdTExdUZ5U0FjN1puUnQ0Rk9xd1RHU3dxaENkNzA9czk2LWMifQ.jr-A3h8o2JuRTtlpUUbOWbZ9op8RoGhwWQPQGFX2nQU44zpTKE8gVcq9IIhXQnkmEJltO4o__kl9sYz0JdxAf98L782Hdt288KeBi4oUThG7jQJEATAzzP143Y47cbXRl6WHW-X5hz6L36UWFXtSEJyGw9HUI_82KwM7bT-nWIeykGUagfvPMjpWIO8sG40qy9RzBykLwRqLNO-YnIOPSIVn0JtQZH5lZ093gGeF4Se1inQUZwxyjWQ-WEQUXu3WJdeWF6a3MTLznh4vE-REsp2_ei9sBSsMdIc5SVJs35dYZwE6s4CRLMC6ZiVviEU89jwyE7oIsF-s6atljcUouA%22"
 allow="camera; microphone; fullscreen; display-capture"
 allowfullscreen>
 </iframe>
@@ -157,21 +130,6 @@ Inquiries:
 samuel.mefane@statspackbw.com
 </a>
 </div>
-
-<script>
-function openAdminPanel(){
-
-const password = prompt("Enter Admin Password:");
-
-if(password === "3567"){
-window.location.href =
-"https://meet.jit.si/moderated/0b642f21c6c1228299fddb4349cc6a519dc70f5b278cda6f9eca4dbc6125d157#jwt=%22eyJraWQiOiJqaXRzaS9tb2RlcmF0ZWQtMjAyNS0xMC0yOS1iMzRhYmI4NyIsImFsZyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJpc3MiOiJqaXRzaSIsInN1YiI6Im1vZGVyYXRlZCIsImF1ZCI6ImppdHNpIiwiaWF0IjoxNzcyMTkzNDMwLCJleHAiOjE3NzIyMDc4MzAsInJvb20iOiIwYjY0MmYyMWM2YzEyMjgyOTlmZGRiNDM0OWNjNmE1MTlkYzcwZjViMjc4Y2RhNmY5ZWNhNGRiYzYxMjVkMTU3IiwidXNlcl9pZCI6IkxnQk8zSW1XeUxZYTJSbDdyMUFLbm91Rm1CQzIiLCJuYW1lIjoiU3RhdHMgUGFjayIsImVtYWlsIjoic3RhdHNwYWNrYndAZ21haWwuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lqa01tTGVuUmhnRDBkWGlqNFVMdTExdUZ5U0FjN1puUnQ0Rk9xd1RHU3dxaENkNzA9czk2LWMifQ.jr-A3h8o2JuRTtlpUUbOWbZ9op8RoGhwWQPQGFX2nQU44zpTKE8gVcq9IIhXQnkmEJltO4o__kl9sYz0JdxAf98L782Hdt288KeBi4oUThG7jQJEATAzzP143Y47cbXRl6WHW-X5hz6L36UWFXtSEJyGw9HUI_82KwM7bT-nWIeykGUagfvPMjpWIO8sG40qy9RzBykLwRqLNO-YnIOPSIVn0JtQZH5lZ093gGeF4Se1inQUZwxyjWQ-WEQUXu3WJdeWF6a3MTLznh4vE-REsp2_ei9sBSsMdIc5SVJs35dYZwE6s4CRLMC6ZiVviEU89jwyE7oIsF-s6atljcUouA%22";
-}
-else if(password !== null){
-alert("Incorrect password.");
-}
-}
-</script>
 
 </body>
 </html>
