@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Statspack Portal</title>
 
+<!-- JaaS External API -->
+<script src="https://8x8.vc/vpaas-magic-cookie-2bf4fd115a2c4bb2abdae6ac8c4207a7/external_api.js" async></script>
+
 <style>
 body{
 margin:0;
@@ -21,7 +24,6 @@ align-items:center;
 padding:20px 40px;
 background:rgba(0,0,0,0.25);
 backdrop-filter:blur(10px);
-position:relative;
 }
 
 .logo{ height:165px; }
@@ -40,24 +42,16 @@ transition:0.3s;
 .meeting-container{
 padding:20px;
 height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
 }
 
-.video-wrapper{
+#jaas-container{
 width:100%;
 height:100%;
 max-width:1200px;
+margin:auto;
 border-radius:14px;
 overflow:hidden;
 box-shadow:0px 0px 25px rgba(0,0,0,0.5);
-}
-
-.video-wrapper iframe{
-width:100%;
-height:100%;
-border:0;
 }
 
 /* FOOTER */
@@ -111,15 +105,9 @@ text-decoration:none;
 </div>
 </div>
 
-<!-- EMBEDDED MEETING -->
+<!-- MEETING AREA -->
 <div class="meeting-container">
-<div class="video-wrapper">
-<iframe
-src="https://meet.jit.si/moderated/0b642f21c6c1228299fddb4349cc6a519dc70f5b278cda6f9eca4dbc6125d157#jwt=%22eyJraWQiOiJqaXRzaS9tb2RlcmF0ZWQtMjAyNS0xMC0yOS1iMzRhYmI4NyIsImFsZyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJpc3MiOiJqaXRzaSIsInN1YiI6Im1vZGVyYXRlZCIsImF1ZCI6ImppdHNpIiwiaWF0IjoxNzcyMTkzNDMwLCJleHAiOjE3NzIyMDc4MzAsInJvb20iOiIwYjY0MmYyMWM2YzEyMjgyOTlmZGRiNDM0OWNjNmE1MTlkYzcwZjViMjc4Y2RhNmY5ZWNhNGRiYzYxMjVkMTU3IiwidXNlcl9pZCI6IkxnQk8zSW1XeUxZYTJSbDdyMUFLbm91Rm1CQzIiLCJuYW1lIjoiU3RhdHMgUGFjayIsImVtYWlsIjoic3RhdHNwYWNrYndAZ21haWwuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lqa01tTGVuUmhnRDBkWGlqNFVMdTExdUZ5U0FjN1puUnQ0Rk9xd1RHU3dxaENkNzA9czk2LWMifQ.jr-A3h8o2JuRTtlpUUbOWbZ9op8RoGhwWQPQGFX2nQU44zpTKE8gVcq9IIhXQnkmEJltO4o__kl9sYz0JdxAf98L782Hdt288KeBi4oUThG7jQJEATAzzP143Y47cbXRl6WHW-X5hz6L36UWFXtSEJyGw9HUI_82KwM7bT-nWIeykGUagfvPMjpWIO8sG40qy9RzBykLwRqLNO-YnIOPSIVn0JtQZH5lZ093gGeF4Se1inQUZwxyjWQ-WEQUXu3WJdeWF6a3MTLznh4vE-REsp2_ei9sBSsMdIc5SVJs35dYZwE6s4CRLMC6ZiVviEU89jwyE7oIsF-s6atljcUouA%22"
-allow="camera; microphone; fullscreen; display-capture"
-allowfullscreen>
-</iframe>
-</div>
+<div id="jaas-container"></div>
 </div>
 
 <!-- FOOTER -->
@@ -130,6 +118,23 @@ Inquiries:
 samuel.mefane@statspackbw.com
 </a>
 </div>
+
+<script>
+window.onload = () => {
+
+const api = new JitsiMeetExternalAPI("8x8.vc", {
+roomName:
+"vpaas-magic-cookie-2bf4fd115a2c4bb2abdae6ac8c4207a7/SampleAppImpatientLiesErectThankfully",
+
+parentNode: document.querySelector('#jaas-container')
+
+/* JWT can be added here later if needed
+jwt: "YOUR_JWT"
+*/
+});
+
+};
+</script>
 
 </body>
 </html>
