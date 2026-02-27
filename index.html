@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@ position:relative;
 
 .logo{ height:165px; }
 
-/* JOIN BUTTON */
+/* ADMIN BUTTON */
 .join-btn{
 position:absolute;
 left:50%;
@@ -61,31 +60,10 @@ transition:0.3s;
 .social-icons img{ width:28px; }
 .web-icon{ filter:brightness(0) invert(1); }
 
-/* ===== ASID SECTION ===== */
-.asid-section{
-max-width:1100px;
-margin:40px auto;
-padding:35px;
-background:rgba(255,255,255,0.06);
-border-radius:16px;
-box-shadow:0 0 25px rgba(0,0,0,0.4);
-line-height:1.7;
-}
-
-.asid-section h1{
-color:#4da6ff;
-margin-bottom:10px;
-}
-
-.asid-section h3{
-font-weight:500;
-color:#9fd0ff;
-}
-
-/* VIDEO AREA */
+/* MEETING AREA */
 .meeting-container{
 padding:20px;
-height:75vh;
+height:80vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -94,7 +72,7 @@ align-items:center;
 .video-wrapper{
 width:100%;
 height:100%;
-max-width:1100px;
+max-width:1200px;
 border-radius:14px;
 overflow:hidden;
 box-shadow:0px 0px 25px rgba(0,0,0,0.5);
@@ -104,47 +82,6 @@ box-shadow:0px 0px 25px rgba(0,0,0,0.5);
 width:100%;
 height:100%;
 border:0;
-}
-
-/* ===== COUNTDOWN MODAL ===== */
-.modal{
-display:none;
-position:fixed;
-z-index:999;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.85);
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.modal-content{
-background:#0f2442;
-padding:40px;
-border-radius:14px;
-max-width:700px;
-box-shadow:0 0 30px rgba(0,0,0,0.7);
-}
-
-.countdown{
-font-size:32px;
-margin-top:20px;
-font-weight:bold;
-color:#4da6ff;
-}
-
-.close{
-margin-top:25px;
-padding:10px 20px;
-border:none;
-background:#2ea3ff;
-color:white;
-border-radius:8px;
-cursor:pointer;
 }
 
 /* FOOTER */
@@ -171,9 +108,11 @@ text-decoration:none;
 
 <img src="logo.png" class="logo">
 
-<!-- JOIN MEETING BUTTON (UPDATED) -->
-<a href="https://meet.jit.si/moderated/1281332ba54b397117aba6ea6ef8661e1245cf8780645b625f27650aa9d44914" target="_blank" class="join-btn">
-JOIN MEETING
+<!-- ADMIN PANEL BUTTON -->
+<a href="https://moderated.jitsi.net/0f7a0afc661843d8b836ae80b337f5137000fc89d5a343089d26866dfa4af7e2"
+target="_blank"
+class="join-btn">
+3567 PASSWORD PROTECTED ADMIN PANEL
 </a>
 
 <div class="social-icons">
@@ -189,7 +128,6 @@ JOIN MEETING
 <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png">
 </a>
 
-<!-- FACEBOOK -->
 <a href="https://www.facebook.com/statspack/" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
 </a>
@@ -204,60 +142,14 @@ JOIN MEETING
 </div>
 </div>
 
-<!-- COUNTDOWN MODAL -->
-<div id="countdownModal" class="modal">
-<div class="modal-content">
-
-<h2>Africa Safer Internet Day 2026</h2>
-
-<p>
-Africa safer internet day 2026 webinar link will be published on the
-25 February 2026 at 00:00 AM.
-</p>
-
-<div id="countdown" class="countdown"></div>
-
-<button class="close" onclick="closeModal()">Close</button>
-
-</div>
-</div>
-
-<!-- ASID CONTENT -->
-<div class="asid-section">
-
-<h1>Africa Safer Internet Day (ASID) 2026</h1>
-
-<p>
-Africa Safer Internet Day 2026 was celebrated on 10 February 2026, with activities continuing throughout the month of February to promote child online protection and digital empowerment across Africa.
-</p>
-
-<p>
-Coordinated in Lesotho by Skillshare Lesotho in partnership with the African Committee of Experts on the Rights and Welfare of the Child, ASID 2026 brings together governments, schools, parents, communities, media, and technology partners to protect children in the digital environment.
-</p>
-
-<h3>
-“Together for a Safer Africa Online: AU Online Safety Policy in Action”
-</h3>
-
-<p>
-The campaign supports implementation of the African Union Child Online Safety and Empowerment Policy, ensuring children can learn, connect, and grow online safely.
-</p>
-
-<p>
-As internet use expands across Africa, children face risks such as cyberbullying, online abuse, harmful content, and privacy threats. ASID 2026 promotes awareness, education, stronger legal protection, and community action to safeguard every child online.
-</p>
-
-<p>
-ASID 2026 is more than a celebration. It is a continental movement to build a safer digital Africa for every child.
-</p>
-
-</div>
-
-<!-- VIDEO -->
+<!-- EMBEDDED MEETING -->
 <div class="meeting-container">
 <div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/ReQB4Q6t3JM"
-allowfullscreen></iframe>
+<iframe
+src="https://meet.jit.si/moderated/0b642f21c6c1228299fddb4349cc6a519dc70f5b278cda6f9eca4dbc6125d157"
+allow="camera; microphone; fullscreen; display-capture"
+allowfullscreen>
+</iframe>
 </div>
 </div>
 
@@ -270,33 +162,5 @@ samuel.mefane@statspackbw.com
 </a>
 </div>
 
-<script>
-function openModal(){
-document.getElementById("countdownModal").style.display="flex";
-}
-
-function closeModal(){
-document.getElementById("countdownModal").style.display="none";
-}
-
-/* COUNTDOWN TIMER */
-const targetDate = new Date("February 25, 2026 09:00:00").getTime();
-
-setInterval(function(){
-const now = new Date().getTime();
-const distance = targetDate - now;
-
-const days = Math.floor(distance/(1000*60*60*24));
-const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-const seconds = Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("countdown").innerHTML =
-days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
-
-},1000);
-</script>
-
 </body>
 </html>
-```
